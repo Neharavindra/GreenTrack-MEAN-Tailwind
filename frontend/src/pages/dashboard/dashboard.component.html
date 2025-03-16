@@ -1,0 +1,55 @@
+<div class="p-6 max-w-4xl mx-auto text-center">
+  <h2 class="text-3xl font-semibold text-green-700">
+    📊 Carbon Footprint Dashboard
+  </h2>
+</div>
+
+<div class="max-w-4xl mx-auto rounded-lg">
+  <div *ngIf="carbonData">
+    <p class="text-xl text-center">🌍 Your Carbon Footprint</p>
+    <table
+      class="table-auto w-full mt-6 border-collapse border border-gray-200"
+    >
+      <thead>
+        <tr class="bg-gray-100 text-l">
+          <th class="border p-2">Activity</th>
+          <th class="border p-2">Carbon Emissions (kg CO₂)</th>
+          <th class="border p-2">📅 Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of carbonData" >
+          <td class="border p-2">{{ data.activity }}</td>
+          <td class="border p-2">{{ data.carbonEmissions }}</td>
+          <td class="border p-2">{{ data.date | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="mt-8">
+      <p class="text-xl text-center">📝 Log New Activity</p>
+      <form (submit)="onSubmit()" class="mt-4 flex flex-col sm:flex-row gap-4">
+        <input
+          [(ngModel)]="activity"
+          placeholder="Activity (e.g., Driving)"
+          class="border p-2 rounded w-full sm:w-auto"
+          required
+          name="activity"
+        />
+        <input
+          [(ngModel)]="carbonEmissions"
+          placeholder="Emissions (kg CO₂)"
+          type="number"
+          class="border p-2 rounded w-full sm:w-auto"
+          required
+          name="carbonEmissions"
+        />
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">
+          Add
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div *ngIf="!carbonData" class="text-gray-500 text-center">Loading data...</div>
+</div>

@@ -1,0 +1,47 @@
+<div class="p-6 max-w-4xl mx-auto text-center">
+  <h2 class="text-3xl font-semibold text-green-700">📌 Carbon Tracker</h2>
+  <p class="text-gray-600">See how much carbon is emitted in your everyday activities.</p>
+</div>
+
+<div class="mt-4 flex flex-wrap justify-center gap-2">
+  <button
+    *ngFor="let category of categories"
+    (click)="filterCategory(category)"
+    class="px-4 py-2 border rounded"
+    [class.bg-green-600]="selectedCategory === category"
+    [class.text-white]="selectedCategory === category"
+  >
+    {{ category }}
+  </button>
+</div>
+
+<div class="max-w-4xl mx-auto">
+  <table class="table-auto w-full mt-6 border-collapse border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100 text-left">
+        <th class="border p-2">Activity</th>
+        <th class="border p-2">Carbon Emissions (kg CO₂)</th>
+        <th class="border p-2">Category</th>
+        <th class="border p-2">Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of filteredData">
+        <td class="border p-2">{{ data.name }}</td>
+        <td class="border p-2">{{ data.emissions }}</td>
+        <td class="border p-2">{{ data.category }}</td>
+        <td class="border p-2">{{ data.duration }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-6 p-4 bg-green-100 rounded max-w-4xl mx-auto">
+  <h3 class="text-xl font-semibold text-center">💡 Tips to Reduce Your Carbon Footprint</h3>
+  <ul class="list-disc ml-6 mt-2 text-left">
+    <li>🔌 Unplug devices when not in use.</li>
+    <li>🚲 Use public transport or cycle instead of driving.</li>
+    <li>🌞 Switch to energy-efficient LED bulbs.</li>
+    <li>💻 Reduce screen brightness and enable energy-saving mode.</li>
+  </ul>
+</div>
