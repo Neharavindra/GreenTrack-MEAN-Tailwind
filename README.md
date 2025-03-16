@@ -2,15 +2,15 @@
 GreenTrack is a full-stack web application designed to help users track and reduce their carbon footprint based on daily activities. The app provides insights into carbon emissions, suggests eco-friendly alternatives, and encourages sustainability.
 
 ### 🚀 Tech Stack
-- **Frontend:**:
-- Angular – Component-based UI
-- Tailwind CSS – Responsive and modern styling
-- **Backend:**:
-- Node.js & Express.js – RESTful API
-- MongoDB & Mongoose – Database for storing carbon data
+- **Frontend:**
+1. Angular – Component-based UI
+2. Tailwind CSS – Responsive and modern styling
+- **Backend:**
+1. Node.js & Express.js – RESTful API
+2. MongoDB & Mongoose – Database for storing carbon data
 - **Other Technologies:**
-RxJS – Reactive programming in Angular
-CORS & Body-parser – Middleware for API handling
+1. RxJS – Reactive programming in Angular
+2. CORS & Body-parser – Middleware for API handling
 
 ### 📌 Features
 - ✅ Track daily carbon emissions 📊
