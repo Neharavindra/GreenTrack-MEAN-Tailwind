@@ -19,7 +19,6 @@ GreenTrack is a full-stack web application designed to help users track and redu
 ### 📷 Preview
 <div align="center">
   <img src="carbon-tracker.png" alt="Carbon Tracker" width="600"/><br/>
-  <img src="dashboard.png" alt="Dashboard" width="600"/>
   <img src="profile.png" alt="Profile Page" width="600"/><br/>
 </div>
 ---
